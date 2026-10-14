@@ -1,4 +1,3 @@
-
 import {onMounted, watchEffect} from "vue"
 import {useSettingStore} from "@/stores/setting.ts";
 import {PronunciationApi} from "@/types/types.ts";
