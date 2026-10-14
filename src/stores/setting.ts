@@ -11,6 +11,8 @@ export interface SettingState {
   wordSound: boolean,
   wordSoundVolume: number,
   wordSoundSpeed: number,
+  realSoundEnabled: boolean, // 是否启用真人发音引擎（本地 voice 语音库）
+  realSoundPath: string, // 真人语音库所在目录（相对于 public，默认 voice），语音文件放于 <path>/<首字母>/<单词>.wav
 
   articleSound: boolean,
   articleAutoPlayNext: boolean,
@@ -60,6 +62,8 @@ export const getDefaultSettingState = (): SettingState => ({
   wordSound: true,
   wordSoundVolume: 100,
   wordSoundSpeed: 1,
+  realSoundEnabled: false,
+  realSoundPath: 'voice',
 
   articleSound: true,
   articleAutoPlayNext: false,
