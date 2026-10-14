@@ -554,6 +554,9 @@ function importOldData() {
           <!--          发音-->
           <div class="line"></div>
           <SettingItem mainTitle="音效" />
+          <SettingItem title="真人发音引擎" desc="启用后优先播放本地 voice 语音库中的真人发音（需将语音库放到 public/voice 目录），未收录的单词自动回退到在线发音">
+            <Switch v-model="settingStore.realSoundEnabled" />
+          </SettingItem>
           <SettingItem title="自动播放句子">
             <Switch v-model="settingStore.articleSound" />
           </SettingItem>
